@@ -5,8 +5,7 @@ L'obiettivo è semplicemente **mostrare in pagina un array di rotte `index`**, r
 
 ## 🎯 Obiettivo
 
-> Il focus di questo progetto è esclusivamente sul **rendering** delle rotte:  
-> non viene gestita alcuna logica di routing reale lato server, ma solo la visualizzazione.
+> Il focus di questo progetto è esclusivamente sul **rendering** delle rotte.
 
 ## 🚀 Funzionalità
 
