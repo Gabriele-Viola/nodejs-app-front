@@ -1,22 +1,26 @@
-const games = require('../db/Games')
+// const games = require('../db/Games')
 
-const index = (req, res) => {
+const connection = require("../db/connecion")
+const Game = require("../models/game")
+const { connect } = require("../Routes/web")
+
+const index = async (req, res) => {
+
+    const games = await Game.all()
+
     res.render('index', {games} )
+
 }
 
-const show = (req, res) => {
-    const slug = req.params.slug
-    const game = games.find(game => game.slug === slug) || false
-    let message 
+const show = async (req, res) => {
 
-    console.log();
-    
-    if(!game){
-        message = `nessun risultato per ${slug}`
-        return res.render('show', {message, game})
-    }
-    message = 'ecco qua'
-    return res.render('show',{ message, game})
+    const slug = req.params.slug
+
+    const game = await Game.find(slug)
+
+    return res.render('show',{game})
+        
+  
 }
 
 
