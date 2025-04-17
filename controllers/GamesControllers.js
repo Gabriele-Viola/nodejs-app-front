@@ -1,7 +1,7 @@
 // const games = require('../db/Games')
 
 const connection = require("../db/connecion")
-const Game = require("../models/game")
+const Game = require("../models/Model")
 const { connect } = require("../Routes/web")
 
 const index = async (req, res) => {
